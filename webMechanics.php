@@ -4,7 +4,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
     $x = (float) ($_POST['x'] ?? 0); // default value for x = 0, if it was not set or was removed by user. Type cast to float type.  
     $y = (float) ($_POST['y'] ?? 0);
 
-    echo sha1('katukas');
+    echo sha1('A single cookie');
     $sum = $x + $y;
     setcookie('Result', $sum);
 
@@ -24,7 +24,7 @@ if (isset($_COOKIE['Result'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sum of two values</title>
+    <title>Sum of two values calculator, using a cookie</title>
 </head>
 <body>
     <h1>Sum of two values</h1>
